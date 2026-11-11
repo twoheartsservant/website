@@ -1,0 +1,12 @@
+TWO-HEARTS SERVANT COMMUNITY — UPDATED PROTOTYPE
+
+prototype-updated.html contains the latest browser-based prototype edits:
+- Search events by ministry and filter by ministry
+- Organizer-set volunteer targets for each ministry at each event
+- Applied, remaining, and full status for ministry capacity
+- Volunteer applications restricted to required ministries with available places
+- Event status options for postponed and cancelled events
+- Organizer event deletion with confirmation
+
+IMPORTANT
+The single-file prototype stores data in the current browser's localStorage. It is not a multi-user live system and does not synchronize changes across devices. The multi-page Supabase production files remain included separately; those require Supabase configuration and deployment as described in README.md. The prototype edits have not been ported into the Supabase-backed multi-page app in this archive.

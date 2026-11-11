@@ -1,0 +1,24 @@
+TWO-HEARTS SERVANT COMMUNITY — ACTUAL MULTI-PAGE UPDATE
+
+The new features are merged into the existing multi-page site (app.js and the actual pages), not into prototype-updated.html.
+
+Included:
+- Ministry-aware event search, ministry filter, and ministry-availability filter.
+- Organizer-set ministry-specific volunteer targets on each event.
+- Per-ministry applied/target/remaining counts on public event cards and the organizer dashboard.
+- Registration form only offers ministries required for the selected event that still have spaces.
+- Server-side SQL trigger checks both event-wide capacity and per-ministry target.
+- Event lifecycle statuses: Draft, Open, Full, Postponed, Cancelled, Completed.
+- Admin event deletion with confirmation; related registrations cascade-delete.
+- Admin application filters by event, ministry, and status; status updates and CSV export.
+- Members can review and cancel their own applications.
+
+IMPORTANT SETUP:
+1. Back up your Supabase project if it already has data.
+2. In Supabase Dashboard > SQL Editor, run the updated supabase_schema.sql.
+3. Confirm config.js contains your own Supabase project URL and public anon/publishable key. Never put a service_role/secret key in browser files.
+4. Do not open the site by double-clicking index.html. In this folder run: python -m http.server 8000
+5. Open http://localhost:8000 in your browser. Add localhost and your deployed URL to Supabase Authentication URL Configuration as needed.
+6. Sign in with an authorized admin account, open admin.html, and create events with ministry targets such as: Media Ministry: 3, Music Ministry: 2.
+
+The SQL enforces registration limits. Public pages receive only aggregate ministry counts, not other volunteers' private details.
